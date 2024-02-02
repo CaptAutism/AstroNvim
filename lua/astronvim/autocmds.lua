@@ -147,6 +147,11 @@ autocmd("BufWinEnter", {
         nowait = true,
       })
     end
+
+    if not vim.g.neotree_opened then
+      vim.cmd "Neotree show"
+      vim.g.neotree_opened = true
+    end
   end,
 })
 
