@@ -13,7 +13,7 @@ return {
       sources = { "filesystem", "buffers", "git_status" },
       source_selector = {
         winbar = true,
-        content_layout = "center",
+        content_layout = "left",
         sources = {
           { source = "filesystem", display_name = get_icon("FolderClosed", 1, true) .. "File" },
           { source = "buffers", display_name = get_icon("DefaultFile", 1, true) .. "Bufs" },
