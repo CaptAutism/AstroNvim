@@ -131,6 +131,12 @@ autocmd("BufWinEnter", {
         vim.cmd.loadview { mods = { emsg_silent = true } }
       end
     end
+
+     if not vim.g.neotree_opened then
+      vim.cmd "Neotree show"
+      vim.g.neotree_opened = true
+    end
+
   end,
 })
 
