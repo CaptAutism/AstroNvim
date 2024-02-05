@@ -251,6 +251,19 @@ if is_available "alpha-nvim" then
   })
 end
 
+vim.api.nvim_create_augroup("neotree_autoopen", { clear = true })
+vim.api.nvim_create_autocmd("BufRead", { -- Changed from BufReadPre
+  desc = "Open neo-tree on enter",
+  group = "neotree_autoopen",
+  once = true,
+  callback = function()
+    if not vim.g.neotree_opened then
+      vim.cmd "Neotree show"
+      vim.g.neotree_opened = true
+    end
+  end,
+})
+
 -- HACK: indent blankline doesn't properly refresh when scrolling the window
 -- remove when fixed upstream: https://github.com/lukas-reineke/indent-blankline.nvim/issues/489
 if is_available "indent-blankline.nvim" then

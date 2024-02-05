@@ -10,6 +10,7 @@ return {
       history = true,
       delete_check_events = "TextChanged",
       region_check_events = "CursorMoved",
+      paths = {"../snippets"}
     },
     config = require "plugins.configs.luasnip",
   },
@@ -106,7 +107,7 @@ return {
           end, { "i", "s" }),
         },
         sources = cmp.config.sources {
-          { name = "nvim_lsp", priority = 1000 },
+          { name = "nvim_lsp", priority = 700},
           { name = "luasnip", priority = 750 },
           { name = "buffer", priority = 500 },
           { name = "path", priority = 250 },

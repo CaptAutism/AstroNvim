@@ -1,0 +1,10 @@
+{
+  "Early Return": {
+    "prefix": ["ee"],
+    "body": [
+      "if err != nil {"
+      "\treturn err"
+      "}"
+    ]
+  }
+}
