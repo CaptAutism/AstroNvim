@@ -28,4 +28,6 @@ if astronvim.default_colorscheme then
   end
 end
 
+vim.api.nvim_set_keymap("i", "<C-s>", "<Cmd>w<CR>", {silent = true})
+
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
